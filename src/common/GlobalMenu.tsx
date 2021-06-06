@@ -44,9 +44,9 @@ const MenuItem: React.FC<menuItemProps> = ({title, page}) => {
       () => {
         setCurrentPage(page);
         if(page==="home") {
-          history.push(`/resume/`);
+          history.push(`/resume-sp/`);
         } else {
-          history.push(`/resume/${page}`)
+          history.push(`/resume-sp/${page}`)
         }
         setTypeOfChange("fade-in");
         setTimeout(() => {
