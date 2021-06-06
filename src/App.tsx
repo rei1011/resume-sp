@@ -39,16 +39,16 @@ const App = () => {
                                   setDirectionOfChange}}>
         <Header />
         <Switch>
-          <Route path="/resume" exact>
+          <Route path="/resume-sp" exact>
             <Home />
           </Route>
-          <Route path="/resume/works" exact>
+          <Route path="/resume-sp/works" exact>
             <Works />
           </Route>
-          <Route path="/resume/skills" exact>
+          <Route path="/resume-sp/skills" exact>
             <Skills />
           </Route>
-          <Route path="/resume/contact" exact>
+          <Route path="/resume-sp/contact" exact>
             <Contact />
           </Route>
         </Switch>
