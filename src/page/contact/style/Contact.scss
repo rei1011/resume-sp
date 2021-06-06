@@ -1,0 +1,11 @@
+.contact {
+  .link {
+    &:not(:last-child) {
+      &:after {
+        content: "/";
+        display: inline-block;
+        margin: 0 12px 0 12px;
+      }
+    }
+  }
+}
