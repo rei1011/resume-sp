@@ -1,0 +1,181 @@
+.works-wrapper {
+  .work-list {
+    width: 50%;
+    padding-right: 7vw;
+    color: #C4C4C4;
+
+      .term {
+        font-size: 14px;
+      }
+      .overview {
+        font-size: 21px;
+      }
+
+    .item-active {
+      color: #2D2A1D;
+      .term {
+        font-size: 16px;
+      }
+      .overview {
+        font-size: 24px;
+      }
+    }
+
+    .work_row-wrapper {
+      height: 64px;
+      cursor: pointer;
+    }
+  }
+
+  .work-detail {
+    width: 50%;
+    padding-left: 7vw;
+  }
+
+  .margin-bottom {
+    margin-bottom: 16px;
+  }
+
+  .border-right {
+    border-right: solid 1px #C4C4C4;
+    // border-color: #C4C4C4;
+  }
+
+  @keyframes animation-fade-in-work-bottom-to-top {
+    0% {
+      transform: translateY(-5%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 100;
+    }
+  }
+
+  @keyframes animation-fade-out-work-bottom-to-top {
+    0% {
+      transform: translateY(0%);
+      opacity: 100;
+    }
+    100% {
+      transform: translateY(5%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes animation-fade-in-work-top-to-bottom {
+    0% { 
+      transform: translateY(5%); 
+      opacity: 0;
+    }
+    100% { 
+      transform: translateY(0%);
+      opacity: 100;
+    }
+  }
+
+  @keyframes animation-fade-out-work-top-to-bottom {
+    0% {
+      transform: translateY(0%);
+      opacity: 100;
+    }
+    100% {
+      transform: translateY(-5%);
+      opacity:0;
+    }
+  }
+
+  @keyframes animation-term-expansion {
+    0% { 
+      font-size: 14px;
+      color: #C4C4C4;
+    }
+    100% { 
+      font-size: 16px;
+      color: #2D2A1D;
+    }
+  }
+
+  @keyframes animation-term-reduction {
+    0% {
+      font-size: 16px;
+      color: #2D2A1D;
+    }
+    100% {
+      font-size: 14px;
+      color: #C4C4C4;
+    }
+  }
+
+  @keyframes animation-overview-expansion {
+    0% { 
+      font-size: 21px;
+      color: #C4C4C4;
+    }
+    100% { 
+      font-size: 24px;
+      color: #2D2A1D;
+    }
+  }
+
+  @keyframes animation-overview-reduction {
+    0% {
+      font-size: 24px;
+      color: #2D2A1D;
+    }
+    100% {
+      font-size: 21px;
+      color: #C4C4C4;
+    }
+  }
+
+  &.fade-in-work {
+    &.bottom-to-top {
+      .work-detail {
+        animation: animation-fade-in-work-bottom-to-top 180ms ease-out forwards;
+      }
+    }
+
+    &.top-to-bottom {
+      .work-detail {
+        animation: animation-fade-in-work-top-to-bottom 180ms ease-out forwards;
+      }
+    }
+
+    .item-active {
+      .work_row-wrapper {
+        .term {
+          animation: animation-term-expansion 180ms ease-out forwards;
+        }
+        .overview {
+          animation: animation-overview-expansion 180ms ease-out forwards;
+        }
+      }
+    }
+  }
+
+  &.fade-out-work {
+    &.bottom-to-top {
+      .work-detail {
+        animation: animation-fade-out-work-bottom-to-top 180ms ease-in forwards;
+      }
+    }
+
+    &.top-to-bottom {
+      .work-detail {
+        animation: animation-fade-out-work-top-to-bottom 180ms ease-in forwards;
+      }
+    }
+
+    .item-active {
+      .work_row-wrapper {
+        .term {
+          animation: animation-term-reduction 180ms ease-in forwards;
+        }
+        .overview {
+          animation: animation-overview-reduction 180ms ease-in forwards;
+        }
+      }
+    }
+  }
+}
